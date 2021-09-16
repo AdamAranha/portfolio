@@ -1,4 +1,4 @@
-.header .fullscreen {
+.header {
   background-color: #1e1f2b;
   position: fixed;
   left: 0;
@@ -17,17 +17,17 @@
   overflow: hidden;
 }
 
-.header .fullscreen h1 {
+.header h1 {
   margin: 0;
 }
 
-.header .fullscreen ul {
+.header ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.header .fullscreen .links {
+.header .links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -46,13 +46,14 @@
   transition: background-color ease 250ms,width ease-in-out 300ms;
 }
 
-.header .fullscreen .links:hover {
+.header .links:hover {
   background-color: #3a3c53;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;
+  cursor: pointer;
 }
 
-.header .fullscreen .links-group {
+.header .links-group {
   position: absolute;
   left: 20px;
   top: 50%;
@@ -64,35 +65,35 @@
   padding: 1vh;
 }
 
-.header .fullscreen .links-group .svg {
+.header .links-group .svg {
   margin: 10px;
 }
 
-.header .fullscreen .resume-link {
+.header .resume-link {
   text-decoration: none;
   color: white;
 }
 
-.header .fullscreen .bracket {
+.header .bracket {
   color: white;
   font-size: 2rem;
 }
 
-.header .fullscreen .header-name {
+.header .header-name {
   opacity: 0;
   -webkit-transition: 150ms opacity 100ms;
   transition: 150ms opacity 100ms;
 }
 
-.header .fullscreen:hover {
+.header:hover {
   width: 250px;
 }
 
-.header .fullscreen:hover .header-name {
+.header:hover .header-name {
   opacity: 1;
 }
 
-.header .fullscreen:hover .links {
+.header:hover .links {
   width: 200px;
 }
 
@@ -107,11 +108,40 @@
 }
 
 @media only screen and (max-width: 850px) {
-  .header .fullscreen {
+  .header {
+    bottom: 0;
+    height: 70px;
+    width: 100vw;
+    max-width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .links-group {
+    padding: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    width: 400px;
+    position: unset;
+    -webkit-transform: unset;
+            transform: unset;
+  }
+  .header .links {
+    padding: 0;
+    margin: 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .header .header-name {
     display: none;
   }
-  .header .mobile {
-    display: block;
+  .header:hover {
+    width: 100vw;
   }
 }
 /*# sourceMappingURL=Header.css.map */
