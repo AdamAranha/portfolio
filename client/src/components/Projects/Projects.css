@@ -2,6 +2,30 @@
   height: 100vh;
   width: 100vw;
   max-width: 100%;
-  background-color: purple;
+  background-color: #12131A;
+  border: 1px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 10vw;
+}
+
+.projects .container {
+  height: 40vh;
+  width: 60vw;
+  background-color: #7e57c7;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 850px) {
+  .projects {
+    padding: 0;
+  }
 }
 /*# sourceMappingURL=Projects.css.map */
