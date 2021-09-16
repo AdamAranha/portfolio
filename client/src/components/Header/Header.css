@@ -1,50 +1,99 @@
-.header {
-  background-color: #0e1212;
-  position: relative;
-  top: 0;
-  height: 10vh;
-  width: 100vw;
-  max-width: 100%;
+.header .fullscreen {
+  background-color: #1e1f2b;
+  position: fixed;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  max-height: 100%;
+  width: 120px;
+  z-index: 1;
+  -webkit-transition: width ease-in-out 300ms;
+  transition: width ease-in-out 300ms;
+  overflow: hidden;
 }
 
-.header h1 {
+.header .fullscreen h1 {
   margin: 0;
 }
 
-.header ul {
+.header .fullscreen ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.header li {
-  display: inline;
+.header .fullscreen .links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 115px;
+  overflow: hidden;
+  padding: 10px 0;
+  margin: 10px 0;
+  font-family: 'Poppins', sans-serif;
   color: white;
+  font-size: 1rem;
+  border-radius: 6px;
+  -webkit-transition: background-color ease 250ms,width ease-in-out 300ms;
+  transition: background-color ease 250ms,width ease-in-out 300ms;
 }
 
-.header .links {
-  padding: 0 1vw;
-  font-family: 'Oxygen', sans-serif;
-  font-size: 1.5rem;
+.header .fullscreen .links:hover {
+  background-color: #3a3c53;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+          box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.header .links-group {
+.header .fullscreen .links-group {
   position: absolute;
-  top: 0;
-  right: 0;
+  left: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   padding: 1vh;
 }
 
-.header .resume-link {
+.header .fullscreen .links-group .svg {
+  margin: 10px;
+}
+
+.header .fullscreen .resume-link {
+  text-decoration: none;
   color: white;
 }
 
-.header .bracket {
+.header .fullscreen .bracket {
   color: white;
-  font-size: 1.5rem;
+  font-size: 2rem;
+}
+
+.header .fullscreen .header-name {
+  opacity: 0;
+  -webkit-transition: 150ms opacity 100ms;
+  transition: 150ms opacity 100ms;
+}
+
+.header .fullscreen:hover {
+  width: 250px;
+}
+
+.header .fullscreen:hover .header-name {
+  opacity: 1;
+}
+
+.header .fullscreen:hover .links {
+  width: 200px;
 }
 
 .header .mobile {
