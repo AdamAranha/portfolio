@@ -6,6 +6,10 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -15,6 +19,16 @@
   padding-left: 150px;
   font-family: 'Poppins', sans-serif;
   position: relative;
+}
+
+.intro .section-name {
+  color: #dacfc2;
+  position: absolute;
+  top: 18%;
+  left: 24%;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 2.3rem;
 }
 
 .intro .container {
@@ -174,18 +188,40 @@
           animation-fill-mode: backwards;
 }
 
+@media only screen and (max-width: 1920px) {
+  .intro .section-name {
+    font-size: 1.7rem;
+    top: 19%;
+    left: 25%;
+  }
+}
+
+@media only screen and (max-width: 1376px) {
+  .intro .section-name {
+    font-size: 1.5rem;
+    top: 17%;
+    left: 27%;
+  }
+}
+
 @media only screen and (max-width: 850px) {
   .intro {
     padding: 0;
   }
+  .intro .section-name {
+    font-size: 1rem;
+    top: 1%;
+    left: 10%;
+    z-index: 1;
+  }
   .intro .container {
-    height: 600px;
+    height: 560px;
     width: 350px;
     border-radius: 6px;
     gap: .5rem;
     padding: 0;
     position: absolute;
-    top: 10px;
+    top: 50px;
     -ms-grid-rows:  1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr;
   }
