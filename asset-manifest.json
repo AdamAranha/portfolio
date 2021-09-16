@@ -1,25 +1,29 @@
 {
   "files": {
-    "main.css": "/static/css/main.e53f4bbd.chunk.css",
-    "main.js": "/static/js/main.3125bce9.chunk.js",
-    "main.js.map": "/static/js/main.3125bce9.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.58ad916e.js",
-    "runtime-main.js.map": "/static/js/runtime-main.58ad916e.js.map",
-    "static/js/2.2d576211.chunk.js": "/static/js/2.2d576211.chunk.js",
-    "static/js/2.2d576211.chunk.js.map": "/static/js/2.2d576211.chunk.js.map",
-    "static/js/3.89bb2f80.chunk.js": "/static/js/3.89bb2f80.chunk.js",
-    "static/js/3.89bb2f80.chunk.js.map": "/static/js/3.89bb2f80.chunk.js.map",
+    "main.css": "/static/css/main.557b5bcb.chunk.css",
+    "main.js": "/static/js/main.05466cdd.chunk.js",
+    "main.js.map": "/static/js/main.05466cdd.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.e5f9833f.js",
+    "runtime-main.js.map": "/static/js/runtime-main.e5f9833f.js.map",
+    "static/js/2.d78c5002.chunk.js": "/static/js/2.d78c5002.chunk.js",
+    "static/js/2.d78c5002.chunk.js.map": "/static/js/2.d78c5002.chunk.js.map",
+    "static/js/3.ad5ea97d.chunk.js": "/static/js/3.ad5ea97d.chunk.js",
+    "static/js/3.ad5ea97d.chunk.js.map": "/static/js/3.ad5ea97d.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/main.e53f4bbd.chunk.css.map": "/static/css/main.e53f4bbd.chunk.css.map",
-    "static/js/2.2d576211.chunk.js.LICENSE.txt": "/static/js/2.2d576211.chunk.js.LICENSE.txt",
+    "static/css/main.557b5bcb.chunk.css.map": "/static/css/main.557b5bcb.chunk.css.map",
+    "static/js/2.d78c5002.chunk.js.LICENSE.txt": "/static/js/2.d78c5002.chunk.js.LICENSE.txt",
     "static/media/ResumeV1.9aa703b7.pdf": "/static/media/ResumeV1.9aa703b7.pdf",
+    "static/media/browser.79a72e27.svg": "/static/media/browser.79a72e27.svg",
+    "static/media/contact.e55b688e.svg": "/static/media/contact.e55b688e.svg",
+    "static/media/file-code.0331eb88.svg": "/static/media/file-code.0331eb88.svg",
     "static/media/hamburger-menu.26ca9cd6.svg": "/static/media/hamburger-menu.26ca9cd6.svg",
-    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg"
+    "static/media/logo.6ce24c58.svg": "/static/media/logo.6ce24c58.svg",
+    "static/media/user.1c8a4abd.svg": "/static/media/user.1c8a4abd.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.58ad916e.js",
-    "static/js/2.2d576211.chunk.js",
-    "static/css/main.e53f4bbd.chunk.css",
-    "static/js/main.3125bce9.chunk.js"
+    "static/js/runtime-main.e5f9833f.js",
+    "static/js/2.d78c5002.chunk.js",
+    "static/css/main.557b5bcb.chunk.css",
+    "static/js/main.05466cdd.chunk.js"
   ]
 }
