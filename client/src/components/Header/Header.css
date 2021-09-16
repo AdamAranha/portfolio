@@ -125,7 +125,7 @@
     display: -webkit-inline-box;
     display: -ms-inline-flexbox;
     display: inline-flex;
-    width: 400px;
+    width: 375px;
     position: unset;
     -webkit-transform: unset;
             transform: unset;
