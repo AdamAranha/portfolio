@@ -1,5 +1,7 @@
 *,*::before,*::after {
   box-sizing: border-box;
+  scrollbar-color: #6969dd #e0e0e0;
+
 }
 
 .App {
