@@ -8,6 +8,7 @@ import { ReactComponent as ArrowSVG } from '../assets/arrow-down.svg';
 export default function Intro() {
     return (
         <div className="intro" id='intro'>
+            <h2 className='section-name'>About Me</h2>
             <div className='container'>
                 <div className='profile intro-section card-extraTall card-skinny'>
                     <div className='profile-background-offset'></div>
