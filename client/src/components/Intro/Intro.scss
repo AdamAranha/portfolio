@@ -1,7 +1,26 @@
-.intro{
+@import './../variables';
+
+.intro {
     height: 100vh;
     width: 100vw;
     max-width:100%;
-    background-color: #0e1212;
+    background-color: $primaryColour;
     border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10vw;
+
+    .container {
+        height: 40vh;
+        width: 60vw;
+        background-color: cadetblue;
+        border-radius: 10px
+    };    
 }
+
+@media only screen and (max-width: 850px){
+    .intro {
+        padding: 0;
+    }
+    }
