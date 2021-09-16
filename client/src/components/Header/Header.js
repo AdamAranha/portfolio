@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import './Header.css';
-import resume from '../../Assets/ResumeV1.pdf';
 import { ReactComponent as HamburgerMenu } from '../assets//hamburger-menu.svg'
 import { ReactComponent as UserSVG } from '../assets/user.svg';
 import { ReactComponent as ProjectsSVG } from '../assets/file-code.svg';
@@ -19,11 +18,14 @@ export default function Header() {
             const { id, name } = header;
             document.getElementById(name).addEventListener('click', () => jumpToSection(id));
         })
+        document.getElementById('arrow').addEventListener('click', () => jumpToSection('skills'))
         return function cleanUpListeners() {
             headers.forEach(header => {
                 const { id, name } = header;
                 document.getElementById(name).removeEventListener('click', () => jumpToSection(id));
             })
+            document.getElementById('arrow').removeEventListener('click', () => jumpToSection('skills'))
+
         }
     })
 
@@ -51,12 +53,10 @@ export default function Header() {
                 <ul className='links-group'>
                     {headers.map(header => {
                         return (
-                            <div>
-                                <li className='links' id={header.name} key={header.name}>
-                                    <div className='svg'>{header.img} </div>
-                                    <div className='header-name'>{header.name}</div>
-                                </li>
-                            </div>
+                            <li className='links' id={header.name} key={header.name} alt={header.name}>
+                                <div className='svg'>{header.img} </div>
+                                <div className='header-name'>{header.name}</div>
+                            </li>
                         )
                     })}
                 </ul>
