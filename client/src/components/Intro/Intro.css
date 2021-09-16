@@ -185,7 +185,7 @@
     gap: .5rem;
     padding: 0;
     position: absolute;
-    top: 60px;
+    top: 45px;
     -ms-grid-rows:  1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows:  1fr 1fr 1fr 1fr 1fr 1fr;
   }
