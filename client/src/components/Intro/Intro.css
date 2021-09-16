@@ -212,6 +212,10 @@
   }
   .intro .container .name {
     margin: 0;
+    text-align: center;
+  }
+  .intro .container .description {
+    text-align: center;
   }
   .intro .intro-section {
     padding: 0 15px;
