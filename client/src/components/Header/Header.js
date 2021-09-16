@@ -1,7 +1,12 @@
 import React, { useEffect } from 'react';
 import './Header.css';
 import resume from '../../Assets/ResumeV1.pdf';
-import { ReactComponent as HamburgerMenu } from './hamburger-menu.svg'
+import { ReactComponent as HamburgerMenu } from '../assets//hamburger-menu.svg'
+import { ReactComponent as UserSVG } from '../assets/user.svg';
+import { ReactComponent as ProjectsSVG } from '../assets/file-code.svg';
+import { ReactComponent as BrowserSVG } from '../assets/browser.svg';
+import { ReactComponent as ContactSVG } from '../assets/contact.svg';
+
 
 
 
@@ -24,10 +29,20 @@ export default function Header() {
 
     const headers = [{
         name: 'About Me',
-        id: 'intro'
+        id: 'intro',
+        img: <UserSVG />
+    }, {
+        name: 'Skills',
+        id: 'skills',
+        img: <ProjectsSVG />
     }, {
         name: 'Projects',
-        id: 'projects'
+        id: 'projects',
+        img: <BrowserSVG />
+    }, {
+        name: 'Contact',
+        id: 'contact',
+        img: <ContactSVG />
     }]
 
     return (
@@ -36,12 +51,14 @@ export default function Header() {
                 <ul className='links-group'>
                     {headers.map(header => {
                         return (
-                            <li className='links' id={header.name} key={header.name}>{header.name}</li>
+                            <div>
+                                <li className='links' id={header.name} key={header.name}>
+                                    <div className='svg'>{header.img} </div>
+                                    <div className='header-name'>{header.name}</div>
+                                </li>
+                            </div>
                         )
                     })}
-                    <li className='links'>
-                        <a className='resume-link' href={resume} target='_blank' rel='noreferrer'><span className='bracket'>[</span>Resume<span className='bracket'>]</span></a>
-                    </li>
                 </ul>
             </div>
             <div className='mobile'>
@@ -49,5 +66,4 @@ export default function Header() {
             </div>
         </div>
     )
-
 }
