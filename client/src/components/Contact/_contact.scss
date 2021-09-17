@@ -1,0 +1,26 @@
+@import './../variables';
+
+.contact {
+    height: 100vh;
+    width: 100vw;
+    max-width:100%;
+    background-color: $primaryColour;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10vw;
+
+    .container {
+        height: 40vh;
+        width: 60vw;
+        background-color: rgb(226, 123, 175);
+        border-radius: 10px
+    };    
+}
+
+@media only screen and (max-width: 850px){
+    .contact {
+        padding: 0;
+    }
+    }
