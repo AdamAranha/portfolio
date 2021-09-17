@@ -4,8 +4,9 @@ import { ReactComponent as CSSSVG } from '../assets/icon-css.svg'
 import { ReactComponent as JSSVG } from '../assets/icon-js.svg'
 import { ReactComponent as SassSVG } from '../assets/icon-sass.svg'
 import { ReactComponent as ReactSVG } from '../assets/icon-react.svg'
-import { ReactComponent as NodeSVG } from '../assets/icon-node.svg'
+import { ReactComponent as NodeSVG } from '../assets/nodejs-icon.svg'
 import { ReactComponent as DatabaseSVG } from '../assets/icon-database.svg'
+import { ReactComponent as GitHubSVG } from '../assets/icon-github.svg'
 
 
 
@@ -33,6 +34,9 @@ export default function Skills() {
         }, {
             name: 'SQL/NoSQL Databases',
             img: <DatabaseSVG />
+        }, {
+            name: 'GitHub',
+            img: <GitHubSVG />
         }
     ]
     return (

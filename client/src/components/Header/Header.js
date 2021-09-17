@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-// import './Header.css';
-import { ReactComponent as HamburgerMenu } from '../assets//hamburger-menu.svg'
 import { ReactComponent as UserSVG } from '../assets/user.svg';
 import { ReactComponent as ProjectsSVG } from '../assets/file-code.svg';
 import { ReactComponent as BrowserSVG } from '../assets/browser.svg';
@@ -60,9 +58,6 @@ export default function Header() {
                         )
                     })}
                 </ul>
-            </div>
-            <div className='mobile'>
-                <HamburgerMenu />
             </div>
         </div>
     )
