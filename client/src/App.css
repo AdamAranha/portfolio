@@ -390,6 +390,7 @@
 .skills .skill-box .skill-name {
   color: #dacfc2;
   margin-top: 0;
+  text-align: center;
 }
 .skills .skill-box:hover {
   background-color: #664d20;
