@@ -3,15 +3,6 @@
 
 $sectionColour:#42bcc0;
 
-@function repeat($amount,$value){
-    $c:'';
-    @for $count from 0 to $amount{
-        $c:$c + ' ' + $value
-    }
-    @return unquote($c)
-}
-
-
 .intro {
     height: 100vh;
     width: 100vw;
