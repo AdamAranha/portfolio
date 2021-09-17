@@ -58,16 +58,13 @@ $sectionColour:#eeb54c;
     }
 
     .skill-box{
-        // background-color: blue;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 15px;    
+        box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 5px;    
         border-radius: 10px;
         transition: background-color ease-in-out 150ms;      
-
-
 
         .svg{
             margin:  10px 10px 0 10px;
@@ -80,10 +77,53 @@ $sectionColour:#eeb54c;
         }
 
         &:hover{
-            background-color: #664d20;
+            background-color: #86672c;
         }
     }
 
+}
+
+@media only screen and (max-width: 1920px){
+    .skills {
+        .section-name{
+            font-size: 1.7rem;
+            top: 19%;
+            left: 25%;
+        }
+
+        .container-shadow{
+            position: absolute;
+            
+            top: 51%;
+            left: 55%;
+            transform: translate(-50%,-50%);
+        }
+    }
+}
+
+@media only screen and (max-width: 1376px){
+    .skills {
+        .section-name{
+            font-size: 1.5rem;
+            top: 17%;
+            left: 27%;
+        }
+
+        .container {
+            padding: 20px;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: repeat(4,1fr);
+            gap: .5rem
+        };    
+        
+        .container-shadow{
+            position: absolute;
+            
+            top: 51%;
+            left: 56.75%;
+            transform: translate(-50%,-50%);
+        }
+    }
 }
 
 @media only screen and (max-width: 850px){
@@ -106,6 +146,8 @@ $sectionColour:#eeb54c;
 
             position: absolute;
             top: 50px;
+            grid-template-columns: 1fr 1fr;
+
         }
 
         .container-shadow{
