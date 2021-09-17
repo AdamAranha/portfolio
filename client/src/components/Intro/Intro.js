@@ -1,5 +1,4 @@
 import React from 'react';
-import './Intro.css';
 import resume from '../../Assets/ResumeV1.pdf';
 import { ReactComponent as ArrowSVG } from '../assets/arrow-down.svg';
 
