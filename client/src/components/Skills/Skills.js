@@ -28,13 +28,10 @@ export default function Skills() {
             name: 'React',
             img: <ReactSVG />
         }, {
-            name: 'Express',
+            name: 'Node/Express',
             img: <NodeSVG />
         }, {
-            name: 'Node',
-            img: <NodeSVG />
-        }, {
-            name: 'Databases',
+            name: 'SQL/NoSQL Databases',
             img: <DatabaseSVG />
         }
     ]
@@ -43,14 +40,9 @@ export default function Skills() {
             <h2 className='section-name'>Skills</h2>
             <div className='container-shadow'></div>
             <div className='container'>
-                {/* <div className='skill-box'></div>
-                <div className='skill-box'></div>
-                <div className='skill-box'></div>
-                <div className='skill-box'></div> */}
                 {skillSet.map(skill => {
                     return (
                         <div className='skill-box'>
-
                             <div className='svg'>{skill.img}</div>
                             <p className='skill-name'>{skill.name}</p>
                         </div>
