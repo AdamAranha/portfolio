@@ -1,0 +1,11 @@
+@use './components/Header/header';
+@use './components/Intro/intro';
+@use './components/Skills/skills';
+@use './components/Projects/projects';
+@use './components/Contact/contact';
+
+*,*::before,*::after {
+    box-sizing: border-box;
+  }
+ 
+
