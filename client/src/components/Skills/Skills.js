@@ -5,7 +5,8 @@ import { ReactComponent as JSSVG } from '../assets/icon-js.svg'
 import { ReactComponent as SassSVG } from '../assets/icon-sass.svg'
 import { ReactComponent as ReactSVG } from '../assets/icon-react.svg'
 import { ReactComponent as NodeSVG } from '../assets/nodejs-icon.svg'
-import { ReactComponent as DatabaseSVG } from '../assets/icon-database.svg'
+import { ReactComponent as MySQLSVG } from '../assets/icon-mysql.svg'
+import { ReactComponent as MongoDBSVG } from '../assets/icon-mongodb.svg'
 import { ReactComponent as GitHubSVG } from '../assets/icon-github.svg'
 
 
@@ -32,8 +33,11 @@ export default function Skills() {
             name: 'Node/Express',
             img: <NodeSVG />
         }, {
-            name: 'SQL/NoSQL Databases',
-            img: <DatabaseSVG />
+            name: 'MySQL Databases',
+            img: <MySQLSVG />
+        }, {
+            name: 'MongoDB Databases',
+            img: <MongoDBSVG />
         }, {
             name: 'GitHub',
             img: <GitHubSVG />
@@ -41,8 +45,10 @@ export default function Skills() {
     ]
     return (
         <div className='skills' id='skills'>
-            <h2 className='section-name'>Skills</h2>
-            <div className='container-shadow'></div>
+            <div className='section-title'>
+                <h2 className='section-name'>Skills</h2>
+            </div>
+            {/* <div className='container-shadow'></div> */}
             <div className='container'>
                 {skillSet.map(skill => {
                     return (
