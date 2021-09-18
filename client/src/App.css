@@ -241,7 +241,7 @@
   }
   .intro .container {
     height: 68vh;
-    width: 85vw;
+    width: 90vw;
     border-radius: 6px;
     gap: 0.5rem;
     padding: 0;
@@ -303,9 +303,9 @@
   height: fit-content;
   width: 60vw;
   background-color: #12131A;
-  border: 1px solid #2e2913;
-  border-width: 1px 0px 0px 1px;
-  box-shadow: #00000080 0px 30px 20px 0px;
+  border: 1px solid #eeb54c;
+  border-width: 1px 10px 10px 1px;
+  box-shadow: #00000080 0px 40px 20px 0px;
   border-radius: 10px;
   padding: 30px;
   display: grid;
@@ -365,7 +365,7 @@
     overflow: hidden;
   }
   .skills .container {
-    width: 85vw;
+    width: 90vw;
     border-radius: 6px;
     gap: 0.5rem;
     padding: 10px;
