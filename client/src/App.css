@@ -325,6 +325,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid #221e0e;
+  border-width: 1px 0px 0px 1px;
   box-shadow: rgba(0, 0, 0, 0.5) 0px 5px 5px;
   border-radius: 10px;
   transition: background-color ease-in-out 150ms;
