@@ -373,6 +373,9 @@
   .skills .section-title {
     width: 80%;
   }
+  .skills .container {
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  }
 }
 .projects {
   height: 100vh;

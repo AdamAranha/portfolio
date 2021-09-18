@@ -127,6 +127,9 @@ $sectionColour:#eeb54c;
             .section-title{
                 width: 80%;
             } 
+            .container{
+                grid-template-columns: repeat(auto-fit,minmax(125px,1fr));
+            }
         }
     }
 }
