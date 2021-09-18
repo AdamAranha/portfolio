@@ -29,7 +29,7 @@ $sectionColour:#eeb54c;
     }
 
     .container {
-        height: max-content;
+        height: fit-content;
         width: 60vw;
         background-color:variables.$primaryColour;
         border: 1px solid #2e2913; 
@@ -121,14 +121,17 @@ $sectionColour:#eeb54c;
             padding: 10px; 
             grid-template-columns: repeat(auto-fit,minmax(85px,1fr));
         }
+    }
 
-        @media (orientation:landscape){
+    @media (orientation:landscape){
+        .skills{
+            height: fit-content;
             .section-title{
                 width: 80%;
             } 
             .container{
                 grid-template-columns: repeat(auto-fit,minmax(125px,1fr));
-            }
+            }    
         }
     }
 }

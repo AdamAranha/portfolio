@@ -296,9 +296,9 @@
   position: relative;
 }
 .skills .container {
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 60vw;
   background-color: #12131A;
   border: 1px solid #2e2913;
@@ -369,6 +369,11 @@
   }
 }
 @media only screen and (max-width: 850px) and (orientation: landscape) {
+  .skills {
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
   .skills .section-title {
     width: 80%;
   }
