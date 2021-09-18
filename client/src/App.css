@@ -84,7 +84,7 @@
 @media only screen and (max-width: 850px) {
   .header {
     bottom: 0;
-    height: 70px;
+    height: 60px;
     width: 100vw;
     max-width: 100%;
     justify-content: center;
@@ -96,6 +96,9 @@
     width: 375px;
     position: unset;
     transform: unset;
+  }
+  .header .links-group .svg {
+    margin: 5px;
   }
   .header .links {
     padding: 0;
@@ -122,14 +125,16 @@
   font-family: "Poppins", sans-serif;
   position: relative;
 }
+.intro .section-title {
+  width: 60%;
+}
 .intro .section-name {
-  color: #dacfc2;
-  position: absolute;
-  top: 18%;
-  left: 24%;
+  margin: 0;
   font-weight: 500;
   letter-spacing: 2px;
-  font-size: 2.3rem;
+  font-size: 2rem;
+  color: #dacfc2;
+  position: relative;
 }
 .intro .container {
   height: 50vh;
@@ -144,81 +149,64 @@
   gap: 1rem;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
+  grid-template-areas: "a a b b b " "a a b b b " "a a b b b " "a a c c c " "a a c c c ";
 }
-.intro .container .card-extraTall {
-  grid-row: span 5/auto;
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
-}
-.intro .container .card-tall {
-  grid-row: span 3/auto;
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
-}
-.intro .container .card-average {
-  grid-row: span 2/auto;
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
-}
-.intro .container .card-skinny {
-  grid-column: span 2/auto;
-}
-.intro .container .card-fat {
-  grid-column: span 3/auto;
-}
-.intro .container .profile {
+.intro .container .picture-section {
+  grid-area: a;
+  display: flex;
   position: relative;
 }
-.intro .container .profile-background {
+.intro .container .picture-section .picture-background {
+  width: 19vw;
+  height: 19vw;
   background-color: #42bcc0;
-  height: 18vw;
-  width: 18vw;
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  background-image: url(./components/assets/profilepic.jpg);
+  background-size: cover;
 }
-.intro .container .profile-background-offset {
-  background-color: #39a3a7;
-  height: 18vw;
-  width: 18vw;
+.intro .container .picture-section .picture-background-shadow {
+  width: 19vw;
+  height: 19vw;
+  background-color: #42bcc0;
   border-radius: 50%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-48%, -48%);
 }
-.intro .container .name {
-  font-size: 5vh;
-  text-align: left;
-  color: #42bcc0;
-  margin: 50px 0 0 0;
-}
-.intro .container .description {
-  font-size: 2vh;
+.intro .container .description-section {
+  grid-area: b;
   color: #dacfc2;
-  text-align: left;
-  margin: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 5px;
 }
-.intro .container .resume {
+.intro .container .links-section {
+  grid-area: c;
+  padding: 1rem;
+}
+.intro .container .links-section .resume {
+  background-color: #12131A;
+  padding: 5px;
+  border-radius: 6px;
   text-decoration: none;
   color: #dacfc2;
-  font-size: 1.5rem;
-  background-color: #12131A;
-  padding: 10px;
-  border-radius: 2px;
   border: 1px solid #dacfc2;
-  transition: all ease-in-out 150ms;
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  transition: all ease-in-out 150ms;
+  font-size: 1rem;
 }
-.intro .container .resume:hover {
+.intro .container .links-section .resume:hover {
   transform: scaleX(1.1);
   color: #42bcc0;
-  border: 1px solid #42bcc0;
+  border-color: #42bcc0;
 }
 .intro .arrow {
   position: absolute;
@@ -229,58 +217,26 @@
 .intro .arrow:hover {
   cursor: pointer;
 }
-@-webkit-keyframes cardEntrance {
-  from {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-@keyframes cardEntrance {
-  from {
-    opacity: 0;
-    transform: scale(0.3);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-.intro .intro-section {
-  display: block;
-  padding: 30px;
-  -webkit-animation: cardEntrance 700ms ease-out;
-          animation: cardEntrance 700ms ease-out;
-  -webkit-animation-fill-mode: backwards;
-          animation-fill-mode: backwards;
-}
 
-@media only screen and (max-width: 1920px) {
+@media only screen and (max-width: 1366px) {
   .intro .section-name {
-    font-size: 1.7rem;
-    top: 19%;
-    left: 25%;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
   }
-}
-@media only screen and (max-width: 1376px) {
-  .intro .section-name {
-    font-size: 1.5rem;
-    top: 17%;
-    left: 27%;
+  .intro .container .picture-section .picture-background {
+    height: 250px;
+    width: 250px;
+  }
+  .intro .container .picture-section .picture-background-shadow {
+    height: 250px;
+    width: 250px;
   }
 }
 @media only screen and (max-width: 850px) {
   .intro {
     padding: 0;
-  }
-  .intro .section-name {
-    font-size: 1.4rem;
-    top: 0;
-    left: 10%;
-    z-index: 1;
+    justify-content: flex-start;
+    overflow: hidden;
   }
   .intro .container {
     height: 68vh;
@@ -288,44 +244,23 @@
     border-radius: 6px;
     gap: 0.5rem;
     padding: 0;
-    position: absolute;
-    top: 50px;
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas: "a a a a a a" "a a a a a a" "a a a a a a" "a a a a a a" "b b b b b b" "b b b b b b" "c c c c c c";
   }
-  .intro .container .card-extraTall {
-    grid-row: span 3/auto;
-  }
-  .intro .container .card-tall {
-    grid-row: span 2/auto;
-  }
-  .intro .container .card-average {
-    grid-row: span 1/auto;
-  }
-  .intro .container .card-skinny {
-    grid-column: span 5/auto;
-  }
-  .intro .container .card-fat {
-    grid-column: span 5/auto;
-  }
-  .intro .container .profile-background {
-    background-color: #42bcc0;
-    height: 225px;
-    width: 225px;
-    border-radius: 50%;
-  }
-  .intro .container .name {
-    margin: 0;
+  .intro .container .description-section {
     text-align: center;
-  }
-  .intro .container .description {
-    text-align: center;
-    margin-top: 20px;
-  }
-  .intro .intro-section {
-    padding: 0 15px;
   }
   .intro .arrow {
     display: none;
+  }
+}
+@media only screen and (max-width: 850px) and (orientation: landscape) {
+  .intro .section-title {
+    width: 80%;
+  }
+  .intro .container {
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "a a b b b " "a a b b b " "a a b b b " "a a b b b " "a a c c c " "a a c c c ";
   }
 }
 .skills {
@@ -439,11 +374,11 @@
     z-index: 1;
   }
   .skills .container {
-    height: 560px;
-    width: 350px;
+    height: 68vh;
+    width: 85vw;
     border-radius: 6px;
     gap: 0.5rem;
-    padding: 25px;
+    padding: 0;
     position: absolute;
     top: 50px;
     grid-template-columns: 1fr 1fr;
@@ -460,7 +395,7 @@
   }
 }
 .projects {
-  height: 150vh;
+  height: 100vh;
   width: 100vw;
   max-width: 100%;
   background-color: #12131A;
@@ -468,7 +403,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
   padding-left: 150px;
   font-family: "Poppins", sans-serif;
   position: relative;
@@ -483,7 +417,7 @@
   font-size: 2.3rem;
 }
 .projects .container {
-  height: 100vh;
+  height: 50vh;
   width: 60vw;
   background-color: #12131A;
   border: 1px solid #7e57c7;
@@ -510,11 +444,11 @@
     z-index: 1;
   }
   .projects .container {
-    height: 560px;
-    width: 350px;
+    height: 68vh;
+    width: 85vw;
     border-radius: 6px;
     gap: 0.5rem;
-    padding: 10px;
+    padding: 0;
     position: absolute;
     top: 50px;
     grid-template-columns: 1fr;
