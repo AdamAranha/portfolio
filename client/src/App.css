@@ -262,6 +262,14 @@
     grid-template-rows: repeat(6, 1fr);
     grid-template-areas: "a a b b b " "a a b b b " "a a b b b " "a a b b b " "a a c c c " "a a c c c ";
   }
+  .intro .container .picture-section .picture-background {
+    height: 200px;
+    width: 200px;
+  }
+  .intro .container .picture-section .picture-background-shadow {
+    height: 200px;
+    width: 200px;
+  }
 }
 .skills {
   height: 100vh;

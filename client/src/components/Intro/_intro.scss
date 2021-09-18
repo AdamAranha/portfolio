@@ -202,6 +202,18 @@ $sectionColour:#42bcc0;
                 'a a c c c '
                 'a a c c c '
                 ;
+
+                .picture-section{
+                    .picture-background{
+                        height: 200px;
+                        width:200px;
+                    }
+    
+                    .picture-background-shadow{
+                        height: 200px;
+                        width:200px;
+                    }
+                }
             }
         }
     }
