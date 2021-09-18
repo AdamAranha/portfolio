@@ -276,17 +276,21 @@
   font-family: "Poppins", sans-serif;
   position: relative;
 }
+.skills .section-title {
+  width: 60%;
+}
 .skills .section-name {
-  color: #dacfc2;
-  position: absolute;
-  top: 18%;
-  left: 24%;
+  margin: 0;
   font-weight: 500;
   letter-spacing: 2px;
-  font-size: 2.3rem;
+  font-size: 2rem;
+  color: #dacfc2;
+  position: relative;
 }
 .skills .container {
-  height: 50vh;
+  height: minmax(50vh, -webkit-fit-content);
+  height: minmax(50vh, -moz-fit-content);
+  height: minmax(50vh, fit-content);
   width: 60vw;
   background-color: #12131A;
   border: 1px solid #2e2913;
@@ -294,11 +298,9 @@
   box-shadow: #00000080 0px 30px 20px 0px;
   border-radius: 10px;
   padding: 30px;
-  z-index: 1;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(4, 1fr);
   gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 .skills .container-shadow {
   background-color: #eeb54c;
@@ -328,70 +330,40 @@
   text-align: center;
 }
 .skills .skill-box:hover {
-  background-color: #86672c;
+  background-color: #ffc8613f;
 }
 
-@media only screen and (max-width: 1920px) {
+@media only screen and (max-width: 1366px) {
   .skills .section-name {
-    font-size: 1.7rem;
-    top: 19%;
-    left: 25%;
+    font-size: 1.4rem;
+    letter-spacing: 1px;
   }
-  .skills .container-shadow {
-    position: absolute;
-    top: 51%;
-    left: 55%;
-    transform: translate(-50%, -50%);
+  .skills .container .picture-section .picture-background {
+    width: 250px;
   }
-}
-@media only screen and (max-width: 1376px) {
-  .skills .section-name {
-    font-size: 1.5rem;
-    top: 17%;
-    left: 27%;
-  }
-  .skills .container {
-    padding: 20px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(4, 1fr);
-    gap: 0.5rem;
-  }
-  .skills .container-shadow {
-    position: absolute;
-    top: 51%;
-    left: 56.75%;
-    transform: translate(-50%, -50%);
+  .skills .container .picture-section .picture-background-shadow {
+    height: 250px;
+    width: 250px;
   }
 }
 @media only screen and (max-width: 850px) {
   .skills {
     padding: 0;
-  }
-  .skills .section-name {
-    font-size: 1.4rem;
-    top: 0;
-    left: 10%;
-    z-index: 1;
+    justify-content: flex-start;
+    overflow: hidden;
   }
   .skills .container {
     height: 68vh;
     width: 85vw;
     border-radius: 6px;
     gap: 0.5rem;
-    padding: 0;
-    position: absolute;
-    top: 50px;
-    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(85px, 1fr));
   }
-  .skills .container-shadow {
-    height: 565px;
-    width: 345px;
-    border-radius: 6px;
-    gap: 0.5rem;
-    padding: 0;
-    position: absolute;
-    top: 45.5%;
-    left: 52.5%;
+}
+@media only screen and (max-width: 850px) and (orientation: landscape) {
+  .skills .section-title {
+    width: 80%;
   }
 }
 .projects {
