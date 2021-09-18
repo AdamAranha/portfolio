@@ -107,7 +107,7 @@ $fancy:false;
     .header{
 
         bottom:0;
-        height: 70px;
+        height: 60px;
         width: 100vw;
         max-width: 100%;
         justify-content: center;
@@ -119,6 +119,10 @@ $fancy:false;
             width: 375px;
             position: unset;
             transform: unset;
+
+            .svg{
+                margin: 5px;
+            }
         }
 
         .links{
