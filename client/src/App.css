@@ -373,6 +373,7 @@
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
+    padding-bottom: 100px;
   }
   .skills .section-title {
     width: 80%;
