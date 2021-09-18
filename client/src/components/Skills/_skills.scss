@@ -29,7 +29,7 @@ $sectionColour:#eeb54c;
     }
 
     .container {
-        height: minmax(50vh,fit-content);
+        height: max-content;
         width: 60vw;
         background-color:variables.$primaryColour;
         border: 1px solid #2e2913; 
@@ -115,7 +115,6 @@ $sectionColour:#eeb54c;
         overflow: hidden;
         
         .container{
-            height:  68vh;
             width: 85vw;    
             border-radius: 6px;
             gap: .5rem;

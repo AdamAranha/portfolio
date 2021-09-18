@@ -296,9 +296,9 @@
   position: relative;
 }
 .skills .container {
-  height: minmax(50vh, -webkit-fit-content);
-  height: minmax(50vh, -moz-fit-content);
-  height: minmax(50vh, fit-content);
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
   width: 60vw;
   background-color: #12131A;
   border: 1px solid #2e2913;
@@ -361,7 +361,6 @@
     overflow: hidden;
   }
   .skills .container {
-    height: 68vh;
     width: 85vw;
     border-radius: 6px;
     gap: 0.5rem;
