@@ -3,7 +3,7 @@
 $sectionColour:#7e57c7;
 
 .projects {
-    height: 150vh;
+    height: 100vh;
     width: 100vw;
     max-width:100%;
     background-color: variables.$primaryColour;
@@ -11,7 +11,7 @@ $sectionColour:#7e57c7;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 1px solid red;
+    // border: 1px solid red;
 
     padding-left: 150px;
     font-family: 'Poppins', sans-serif;
@@ -29,7 +29,7 @@ $sectionColour:#7e57c7;
     }
 
     .container {
-        height: 100vh;
+        height: 50vh;
         width: 60vw;
         background-color:variables.$primaryColour;
         border: 1px solid $sectionColour; 
@@ -61,11 +61,11 @@ $sectionColour:#7e57c7;
         }
 
         .container{
-            height: 560px;
-            width: 350px;    
+            height:  68vh;
+            width: 85vw;    
             border-radius: 6px;
             gap: .5rem;
-            padding: 10px;
+            padding: 0;
 
             position: absolute;
             top: 50px;
