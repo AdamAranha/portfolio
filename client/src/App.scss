@@ -1,8 +1,6 @@
 @use './components/Header/header';
-@use './components/Intro/intro';
-@use './components/Skills/skills';
-@use './components/Projects/projects';
-@use './components/Contact/contact';
+@use './components/About/about';
+
 
 *,*::before,*::after {
     box-sizing: border-box;

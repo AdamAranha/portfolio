@@ -1,21 +1,11 @@
-@import './../variables';
+@use '../variables' as *;
 
 $header-testColour:red;
 
-$fancy:false;
-
 .header{
 
-    @if($fancy){
-        background: linear-gradient(
-            180deg, 
-            rgba(52,54,71,1) 0%, 
-            rgba(28,28,39,1) 70%, 
-            rgba(18,19,26,1) 90%,
-            rgba(18,19,26,1) 100%);
-    }@else{
-        background-color: $ctaColour;
-    }
+    background-color: $ctaColour;
+
     position: fixed;
     left: 0;
     display: flex;
@@ -82,12 +72,15 @@ $fancy:false;
     .header-name{
         opacity: 0;    
         transition:150ms opacity 100ms;
+        margin-left: 10px;
     }
 
     &:hover{
         width:250px;
-
-        .header-name{ opacity: 1; }
+        
+        .header-name{ 
+            opacity: 1; 
+        }
         .links{ width: 200px; }
     }
 
@@ -115,8 +108,8 @@ $fancy:false;
 
         .links-group{
             padding: 0;
-            display: inline-flex;
-            width: 375px;
+            display: flex;
+            width: 60vw;
             position: unset;
             transform: unset;
 

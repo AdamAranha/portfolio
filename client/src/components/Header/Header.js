@@ -1,48 +1,27 @@
-import React, { useEffect } from 'react';
-import { ReactComponent as UserSVG } from '../assets/user.svg';
-import { ReactComponent as ProjectsSVG } from '../assets/file-code.svg';
-import { ReactComponent as BrowserSVG } from '../assets/browser.svg';
-import { ReactComponent as ContactSVG } from '../assets/contact.svg';
-
-
-
+import React from 'react';
+import SVGUser from '../assets/user.svg';
+import SVGSkills from '../assets/file-code.svg';
+import SVGProjects from '../assets/browser.svg';
+import SVGContact from '../assets/contact.svg';
 
 export default function Header() {
-
-    useEffect(() => {
-        function jumpToSection(id) { document.getElementById(id).scrollIntoView({ behavior: 'smooth' }); }
-
-        headers.forEach(header => {
-            const { id, name } = header;
-            document.getElementById(name).addEventListener('click', () => jumpToSection(id));
-        })
-        document.getElementById('arrow').addEventListener('click', () => jumpToSection('skills'))
-        return function cleanUpListeners() {
-            headers.forEach(header => {
-                const { id, name } = header;
-                document.getElementById(name).removeEventListener('click', () => jumpToSection(id));
-            })
-            document.getElementById('arrow').removeEventListener('click', () => jumpToSection('skills'))
-
-        }
-    })
 
     const headers = [{
         name: 'About Me',
         id: 'intro',
-        img: <UserSVG />
+        img: SVGUser
     }, {
         name: 'Skills',
         id: 'skills',
-        img: <ProjectsSVG />
+        img: SVGSkills
     }, {
         name: 'Projects',
         id: 'projects',
-        img: <BrowserSVG />
+        img: SVGProjects
     }, {
         name: 'Contact',
         id: 'contact',
-        img: <ContactSVG />
+        img: SVGContact
     }]
 
     return (
@@ -52,7 +31,7 @@ export default function Header() {
                     {headers.map(header => {
                         return (
                             <li className='links' id={header.name} key={header.name} alt={header.name}>
-                                <div className='svg'>{header.img} </div>
+                                <img className='svg' src={header.img} alt={header.name} />
                                 <div className='header-name'>{header.name}</div>
                             </li>
                         )
