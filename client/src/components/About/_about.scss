@@ -5,4 +5,8 @@
     width: 100vw;
     max-width: 100%;
     background-color: $primaryColour;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

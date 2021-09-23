@@ -118,6 +118,28 @@
   width: 100vw;
   max-width: 100%;
   background-color: #001220;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dias {
+  height: 500px;
+}
+
+.dias-moving {
+  transform-origin: center;
+  transition: all 1s ease-in-out;
+}
+
+.dias-sun {
+  transition: all 1s ease-out;
+}
+
+.dias-moon {
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: all 1s ease-in-out;
 }
 
 *, *::before, *::after {
