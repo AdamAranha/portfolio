@@ -3,13 +3,34 @@
   position: fixed;
   left: 0;
   display: flex;
-  align-items: center;
   height: 100vh;
   max-height: 100%;
   width: 120px;
   z-index: 10;
   transition: width ease-in-out 300ms;
   overflow: hidden;
+  justify-content: center;
+}
+.header .switch-moon, .header .switch-sun {
+  height: 40px;
+}
+.header .switch-wrapper {
+  position: absolute;
+  left: 25px;
+  top: 20%;
+  transform: translateY(-50%);
+}
+.header .switch-wrapper .switch-container {
+  position: relative;
+  width: 60px;
+  transform-box: fill-box;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+}
+.header .switch-wrapper .switch-container .switch-sun {
+  position: absolute;
+  opacity: 0;
 }
 .header h1 {
   margin: 0;
@@ -39,7 +60,7 @@
 }
 .header .links-group {
   position: absolute;
-  left: 20px;
+  left: 25px;
   top: 50%;
   transform: translateY(-50%);
   width: -webkit-fit-content;
@@ -91,6 +112,9 @@
     justify-content: center;
     align-items: center;
   }
+  .header .switch-wrapper {
+    top: 50%;
+  }
   .header .links-group {
     padding: 0;
     display: flex;
@@ -124,22 +148,17 @@
 }
 
 .dias {
-  height: 500px;
-}
-
-.dias-moving {
+  position: relative;
   transform-origin: center;
-  transition: all 1s ease-in-out;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
 }
-
-.dias-sun {
-  transition: all 1s ease-out;
-}
-
-.dias-moon {
-  transform-origin: center;
-  transform-box: fill-box;
-  transition: all 1s ease-in-out;
+.dias .dias-container {
+  position: absolute;
 }
 
 *, *::before, *::after {

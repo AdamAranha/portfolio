@@ -1,19 +1,11 @@
 .dias{
-    height:500px;
-}
-
-.dias-moving{
-    transform-origin: center;
+    position: relative;
     // transform-box: fill-box;
-    transition: all 1s ease-in-out;
-}
-
-.dias-sun{
-    transition: all 1s ease-out;
-}
-
-.dias-moon{
     transform-origin: center;
-    transform-box: fill-box;
-    transition: all 1s ease-in-out;
+    width: max-content;
+    height: max-content;
+
+    .dias-container{
+        position:absolute;
+    }
 }
