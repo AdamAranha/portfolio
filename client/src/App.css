@@ -14,24 +14,6 @@
 .header .switch-moon, .header .switch-sun {
   height: 40px;
 }
-.header .switch-wrapper {
-  position: absolute;
-  left: 25px;
-  top: 20%;
-  transform: translateY(-50%);
-}
-.header .switch-wrapper .switch-container {
-  position: relative;
-  width: 60px;
-  transform-box: fill-box;
-  transform-origin: center;
-  display: flex;
-  justify-content: center;
-}
-.header .switch-wrapper .switch-container .switch-sun {
-  position: absolute;
-  opacity: 0;
-}
 .header h1 {
   margin: 0;
 }
@@ -137,7 +119,64 @@
     width: 100vw;
   }
 }
+.switch-wrapper {
+  position: absolute;
+  left: 30px;
+  top: 10%;
+  transform: translateY(-50%);
+}
+.switch-wrapper .switch-container {
+  position: relative;
+  width: 60px;
+  transform-box: fill-box;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+}
+.switch-wrapper .switch-container .switch-moon, .switch-wrapper .switch-container .switch-sun {
+  height: 40px;
+}
+.switch-wrapper .switch-container .switch-sun {
+  position: absolute;
+  opacity: 0;
+}
+
+@media only screen and (max-width: 850px) {
+  .switch-wrapper {
+    top: 50%;
+    left: 20px;
+  }
+  .switch-wrapper .switch-container .switch-moon, .switch-wrapper .switch-container .switch-sun {
+    height: 30px;
+  }
+}
 .about-section {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color: #001220;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./components/assets/layered-waves-haikei.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.skills-section {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color: #001220;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./components/assets/layered-waves-haikei1.svg);
+  background-size: cover;
+  background-position: center;
+}
+
+.projects-section {
   height: 100vh;
   width: 100vw;
   max-width: 100%;
@@ -147,18 +186,14 @@
   align-items: center;
 }
 
-.dias {
-  position: relative;
-  transform-origin: center;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
-}
-.dias .dias-container {
-  position: absolute;
+.contact-section {
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%;
+  background-color: #001220;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 *, *::before, *::after {

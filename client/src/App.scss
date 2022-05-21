@@ -1,6 +1,10 @@
 @use './components/Header/header';
-@use './components/About/about';
 @use './components/Dias/dias';
+@use './components/About/about';
+@use './components/Skills/skills';
+@use './components/Projects/projects';
+@use './components/Contact/contact';
+
 
 
 *,*::before,*::after {

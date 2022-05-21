@@ -22,33 +22,6 @@ $header-testColour:red;
     .switch-moon,.switch-sun{
         height: 40px;
     }
-    
-    .switch-wrapper{
-        position: absolute;
-        left: 25px;
-        top: 20%;
-        transform: translateY(-50%);
-
-        .switch-container{
-            position:relative;
-            width: 60px;
-            transform-box: fill-box;
-            transform-origin: center;
-            display: flex;
-            justify-content: center;
-
-            .switch-sun{
-                position:absolute;
-                opacity: 0;
-            }
-
-            .switch-moon{
-
-            }
-        }
-    }
-
-
 
     h1{
         margin: 0;
@@ -138,7 +111,6 @@ $header-testColour:red;
         max-width: 100%;
         justify-content: center;
         align-items: center;
-
         .switch-wrapper{
             top: 50%;
         }

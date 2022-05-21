@@ -1,43 +1,53 @@
 import React from 'react';
+import Sun from '../assets/sun.svg';
+import Moon from '../assets/moon.svg';
 
 export default function Dias() {
 
     let deg = 0;
+    let mode = 'dark';
 
-    function swapDias(symbol) {
-        console.log('Click registered')
-        document.querySelector('.dias').animate([
-            { transform: 'rotate(-10deg)' }
-        ],
-            {
-                duration: 1000
-            })
+    function switchMode() {
+        const duration = 400;
+        let moonOpacity;
+        let sunOpacity;
 
+        function shortcut(element) { return document.querySelector(element) }
+
+        deg += 720;
+        shortcut('.switch-container').animate([{ transform: `rotate(${deg}deg)` }],
+            { duration, fill: 'forwards' });
+
+        if (mode === 'dark') {
+            moonOpacity = 0;
+            sunOpacity = 1;
+            mode = 'light'
+        } else {
+            moonOpacity = 1;
+            sunOpacity = 0;
+            mode = 'dark'
+        }
+        shortcut('.switch-moon').animate([{ opacity: moonOpacity }],
+            { duration, fill: 'forwards' });
+        shortcut('.switch-sun').animate([{ opacity: sunOpacity }],
+            { duration, fill: 'forwards' });
+
+        hitServer();
+    }
+
+    async function hitServer() {
+        const res = await fetch('/server', {
+            method: 'GET'
+        }).then(r => r.json());
+        console.log(res);
     }
 
     return (
-        <div className='dias' onClick={() => swapDias()}>
-            {/* #2F44E4 */}
-            <div className='dias-container'>
-                <svg className='dias-moon' viewBox="0 0 50 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M28.2067 0.0473026C24.7361 0.263043 21.3171 1.07441 18.1467 2.43452C16.8147 3.00201 14.315 4.34335 13.527 4.91084C13.4238 4.98119 13.0205 5.27197 12.6312 5.54868C11.7917 6.13962 10.9147 6.83843 10.1877 7.48096C9.42327 8.15632 8.42899 9.09433 8.32112 9.23972C8.26953 9.31007 8.02565 9.58678 7.78177 9.85411C2.04589 16.1481 -0.730589 24.6417 0.165202 33.1541C0.882773 39.9968 3.89845 46.3283 8.77136 51.2059C11.8902 54.3248 15.4734 56.6275 19.6287 58.1752C21.5329 58.8834 23.6856 59.4322 25.7445 59.7229C27.3438 59.9481 28.1364 59.9997 29.9655 59.9997C31.7196 60.0043 32.3996 59.9621 33.7644 59.7886C34.1631 59.737 34.618 59.6807 34.7728 59.6714C34.9275 59.6573 35.3402 59.5822 35.6873 59.5072C39.0031 58.7568 40.8322 58.133 43.3086 56.9089C45.1189 56.0132 46.4603 55.1924 47.9986 54.0387C49.2227 53.1194 49.3352 52.9928 49.1101 52.7677C49.0304 52.6879 48.9084 52.6739 48.0173 52.6504C39.8473 52.4112 32.137 48.7155 26.7013 42.4403C21.1483 36.0243 18.6485 27.4041 19.8867 18.9433C20.9091 11.9365 24.4313 5.55806 29.8482 0.891504C30.3923 0.422503 30.3876 0.431883 30.3876 0.272423C30.3876 0.0285426 30.2844 -0.00428745 29.5153 0.000402553C29.1307 0.00509256 28.5444 0.0285426 28.2067 0.0473026Z" fill="#9E9E9E" />
-                </svg>
+        <div className='switch-wrapper' >
+            <div className='switch-container' onClick={() => switchMode()}>
+                <img className='switch-sun' src={Sun} alt='sun' />
+                <img className='switch-moon' src={Moon} alt='moon' />
             </div>
-
-            <div className='dias-container'>
-                <svg className='dias-sun' viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30 0L34.4794 7.75862L25.5206 7.75862L30 0Z" fill="#E1DC5F" />
-                    <path d="M30 60L25.5206 52.2414H34.4794L30 60Z" fill="#E1DC5F" />
-                    <path d="M0 30L7.75862 25.5206V34.4794L0 30Z" fill="#E1DC5F" />
-                    <path d="M60 30L52.2414 34.4794V25.5206L60 30Z" fill="#E1DC5F" />
-                    <path d="M51.2132 8.78681L48.8945 17.4404L42.5596 11.1055L51.2132 8.78681Z" fill="#E1DC5F" />
-                    <path d="M8.7868 51.2132L11.1055 42.5596L17.4404 48.8945L8.7868 51.2132Z" fill="#E1DC5F" />
-                    <path d="M51.2132 51.2132L42.5596 48.8945L48.8945 42.5596L51.2132 51.2132Z" fill="#E1DC5F" />
-                    <path d="M8.78679 8.7868L17.4404 11.1055L11.1055 17.4404L8.78679 8.7868Z" fill="#E1DC5F" />
-                    <circle cx="30" cy="30" r="20.6897" fill="#E1DC5F" />
-                </svg>
-            </div>
-
         </div>
     )
 }

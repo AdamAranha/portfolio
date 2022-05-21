@@ -1,6 +1,6 @@
 @use '../variables' as *;
 
-.about-section{
+.projects-section{
     height: 100vh;
     width: 100vw;
     max-width: 100%;
@@ -9,8 +9,4 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-image: url(./components/assets/layered-waves-haikei.svg);
-    background-size: cover;
-    background-position: center;
 }

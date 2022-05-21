@@ -1,11 +1,38 @@
-.dias{
-    position: relative;
-    // transform-box: fill-box;
-    transform-origin: center;
-    width: max-content;
-    height: max-content;
+.switch-wrapper{
+    position: absolute;
+    left: 30px;
+    top: 10%;
+    transform: translateY(-50%);
 
-    .dias-container{
-        position:absolute;
+    .switch-container{
+        position:relative;
+        width: 60px;
+        transform-box: fill-box;
+        transform-origin: center;
+        display: flex;
+        justify-content: center;
+
+        .switch-moon,.switch-sun{
+            height: 40px;
+        }
+
+        .switch-sun{
+            position:absolute;
+            opacity: 0;
+        }
+    }
+}
+
+@media only screen and (max-width: 850px){
+    .switch-wrapper{
+        top: 50%;
+        left: 20px;
+
+        .switch-container{
+            // width: 50px;
+            .switch-moon,.switch-sun{
+                height: 30px;
+            }
+        }
     }
 }
