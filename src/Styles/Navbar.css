@@ -1,5 +1,5 @@
 .navbar {
-  background-color: lightgreen;
+  background-color: #181b29;
   position: fixed;
   height: 100px;
   width: 100vw;
@@ -17,9 +17,13 @@
 }
 
 .navbar ul {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   list-style: none;
   padding: 0;
 }
@@ -27,12 +31,26 @@
 .navbar ul li {
   display: -ms-grid;
   display: grid;
-  padding: 0 5px 0 5px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.navbar ul li img {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.navbar ul li p {
+  color: whitesmoke;
+  font-weight: 400;
+  display: none;
 }
 
 @media (min-width: 1366px) {
   .navbar {
-    background-color: coral;
+    background-color: #181b29;
     display: block;
     height: 100vh;
     width: 5vw;
@@ -52,15 +70,24 @@
     top: 50%;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
+    width: auto;
   }
   .navbar ul li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 10px;
+    padding: 7.5px 10px;
+    margin: 15px 0;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    border-radius: 10px;
+    border: 2px solid transparent;
+  }
+  .navbar ul li:hover {
+    background-color: #212639;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
   .navbar ul li p {
     padding-left: 10px;
@@ -68,13 +95,18 @@
     opacity: 0;
     -webkit-transition: opacity 400ms ease-in-out;
     transition: opacity 400ms ease-in-out;
+    display: block;
+  }
+  .navbar ul li img {
+    position: static;
+    -webkit-transform: unset;
+            transform: unset;
   }
 }
 
 @media (min-width: 1920px) {
   .navbar {
-    background-color: turquoise;
-    width: 3.5vw;
+    width: 3.75vw;
   }
   .navbar:hover {
     width: 8.5vw;
@@ -83,7 +115,6 @@
 
 @media (min-width: 2560px) {
   .navbar {
-    background-color: darkorchid;
     width: 2.75vw;
   }
   .navbar:hover {

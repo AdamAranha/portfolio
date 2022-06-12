@@ -1,5 +1,5 @@
 .navbar {
-    background-color:lightgreen;
+    background-color:#181b29;
     position: fixed;
     height: 100px;
     width: 100vw;
@@ -10,20 +10,37 @@
     overflow: hidden;
 
     ul {
+        width: 100%;
         display: flex;
+        justify-content: space-evenly;
         list-style: none;
         padding: 0;
 
         li {
             display: grid;
-            padding: 0 5px 0 5px;
+            padding: 0 10px;
+            cursor: pointer;
+
+            img {
+                position: relative;
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+
+            p {
+                color: whitesmoke;
+                font-weight: 400;
+                display: none;
+            }
         }
     }
 }
 
 @media (min-width: 1366px) {
+    $base-colour: #181b29;
+
     .navbar {
-        background-color: coral;
+        background-color: $base-colour;
         display: block;
         height: 100vh;
         width: 5vw;
@@ -42,17 +59,32 @@
             position: relative;
             top: 50%;
             transform: translate(0,-50%);
+            width: auto;
     
             li {
                 display: flex;
-                padding: 10px;
+                padding: 7.5px 10px;
+                margin: 15px 0;
                 align-items: center;
-    
+                border-radius: 10px;
+                border: 2px solid transparent;
+
+
+                &:hover {
+                    background-color: lighten($base-colour, 5%);
+                    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;                }
+
                 p {
                     padding-left: 10px;
                     white-space: nowrap;
                     opacity: 0;
-                    transition: opacity 400ms ease-in-out
+                    transition: opacity 400ms ease-in-out;
+                    display: block;
+                }
+
+                img {
+                    position: static;
+                    transform: unset;
                 }
             }
         }
@@ -61,8 +93,7 @@
 
 @media (min-width: 1920px) {
     .navbar {
-        background-color: turquoise;
-        width: 3.5vw;
+        width: 3.75vw;
 
         &:hover {
             width: 8.5vw; 
@@ -72,7 +103,6 @@
 
 @media (min-width:2560px) {
     .navbar {
-        background-color: darkorchid;
         width: 2.75vw;
 
         &:hover {
