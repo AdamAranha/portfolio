@@ -1,7 +1,7 @@
 .navbar {
   background-color: #181b29;
   position: fixed;
-  height: 100px;
+  height: 90px;
   width: 100vw;
   bottom: 0;
   display: -webkit-box;
@@ -14,6 +14,8 @@
       -ms-flex-align: center;
           align-items: center;
   overflow: hidden;
+  -webkit-transition: bottom 250ms ease;
+  transition: bottom 250ms ease;
 }
 
 .navbar ul {
@@ -50,8 +52,8 @@
 
 @media (min-width: 1366px) {
   .navbar {
-    background-color: #181b29;
     display: block;
+    position: fixed;
     height: 100vh;
     width: 5vw;
     -webkit-transition: width 250ms ease-in-out;
