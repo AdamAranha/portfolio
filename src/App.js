@@ -11,9 +11,9 @@ function App() {
 
     <Navbar/>
     <About/>
-     <Skills/>
-    {/*<Projects/>
-    <Contact/> */}
+    <Skills/>
+    <Projects/>
+    <Contact/>
     </div>
   );
 }
