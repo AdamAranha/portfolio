@@ -9,6 +9,20 @@ import ContactSVG from '../Assets/Contact.svg';
 const Navbar = ()=>{
 
     useEffect(()=>{
+        let navbar = document.getElementById('navbar');
+        const showNav= () => {
+                if (window.scrollY > scrollPos) {
+                    navbar.style.bottom = '-100px';
+                    } else {
+                        navbar.style.bottom = '0';
+                    }
+                    scrollPos = window.scrollY;
+            }
+       if(window.screen.width < 1366) {
+            var scrollPos = 0;
+            window.addEventListener('scroll', ()=>showNav());
+       }
+
         const jumpToSection = (id) => document.getElementById(id).scrollIntoView({behavior:'smooth'});
         headers.forEach(({id,name})=> {
             document.getElementById(name).addEventListener('click',()=>jumpToSection(id));
@@ -17,8 +31,9 @@ const Navbar = ()=>{
             headers.forEach(({id,name}) => {
                 document.getElementById(name).removeEventListener('click', () => jumpToSection(id));
             })
+            window.removeEventListener('scroll',()=>showNav());
         }
-    })
+    }, [])
 
     const headers = [{
         name: 'About Me',
@@ -39,7 +54,7 @@ const Navbar = ()=>{
     }]
 
     return (
-        <div className='navbar'>
+        <div className='navbar' id='navbar'>
             <ul>
                 {headers.map(({name,img}) => {
                     return (
