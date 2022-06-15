@@ -12,10 +12,10 @@ const Navbar = ()=>{
         let navbar = document.getElementById('navbar');
         const showNav= () => {
                 if (window.scrollY > scrollPos) {
-                    navbar.style.bottom = '-100px';
-                    } else {
-                        navbar.style.bottom = '0';
-                    }
+                    if (window.screen.width < 1366) navbar.style.bottom = '-100px';
+                } else {
+                    if (window.screen.width < 1366) navbar.style.bottom = '0';
+                }
                     scrollPos = window.scrollY;
             }
        if(window.screen.width < 1366) {
@@ -25,7 +25,7 @@ const Navbar = ()=>{
 
         const jumpToSection = (id) => document.getElementById(id).scrollIntoView({behavior:'smooth'});
         headers.forEach(({id,name})=> {
-            document.getElementById(name).addEventListener('click',()=>jumpToSection(id));
+            document.getElementById(name).addEventListener('click',() => jumpToSection(id));
         })
         return function cleanUpListeners() {
             headers.forEach(({id,name}) => {
@@ -59,13 +59,11 @@ const Navbar = ()=>{
                 {headers.map(({name,img}) => {
                     return (
                         <li id={name} key={name}>
-                           <img src={img}/>
+                           <img src={img} alt={name}/>
                            <p>{name}</p>
                         </li>
-                    )
-                })}
+                    )})}
             </ul>
-
         </div>
     )
 }

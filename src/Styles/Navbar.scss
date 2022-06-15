@@ -11,6 +11,7 @@ $base-colour: #181b29;
     align-items: center;
     overflow: hidden;
     transition: bottom 250ms ease;
+    z-index: 1;
 
 
     ul {
@@ -32,8 +33,9 @@ $base-colour: #181b29;
             }
 
             p {
-                color: whitesmoke;
+                color: rgba(245, 245, 245, 0.527);
                 font-weight: 400;
+                padding-top: 5px;
                 display: none;
             }
         }
@@ -77,7 +79,8 @@ $base-colour: #181b29;
                     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;                }
 
                 p {
-                    padding-left: 10px;
+                    color: whitesmoke;
+                    padding: 0 0 0 10px;
                     white-space: nowrap;
                     opacity: 0;
                     transition: opacity 400ms ease-in-out;
